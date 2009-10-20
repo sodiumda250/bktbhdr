@@ -1,4 +1,4 @@
-$Id: bktbhdr.txt,v 1.4 2005/05/30 02:27:57 woods Exp $
+$Id: bktbhdr.txt,v 1.5 2005/06/01 02:53:01 woods Exp $
 
 【BkTbHdr】カレントメールの指定したヘッダの内容をタイトルバーに表示する。
                                                       2005年 5月27日 林 隆一郎
