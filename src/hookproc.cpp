@@ -1,8 +1,8 @@
 /*
- * $Id: hookproc.cpp,v 1.1.1.1 2005/05/27 09:44:26 woods Exp $
+ * $Id: hookproc.cpp,v 1.2 2005/05/30 00:53:24 woods Exp $
  */
 
-static char id[] = "$Id: hookproc.cpp,v 1.1.1.1 2005/05/27 09:44:26 woods Exp $";
+static char id[] = "$Id: hookproc.cpp,v 1.2 2005/05/30 00:53:24 woods Exp $";
 
 #include <stdio.h>
 #include <windows.h>
@@ -72,7 +72,6 @@ void hookMailWindow(HWND hMainWnd)
  */
 static LRESULT CALLBACK WindowProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
 {
-    LRESULT ret;
     if (hwnd != hookhwnd) {
         return ::CallWindowProc((WNDPROC)prevWndProc, hwnd, uMsg, wParam, lParam);
     }

@@ -1,9 +1,9 @@
 #!/usr/bin/make -f
-# $Id: Makefile,v 1.1.1.1 2005/05/27 09:44:26 woods Exp $
+# $Id: Makefile,v 1.2 2005/05/30 02:27:57 woods Exp $
 
 MAJOR = 0
 MINOR = 0
-TEENY = 0
+TEENY = 1
 
 COPYRIGHT = '"Copyright (C) 2005 woods"'
 

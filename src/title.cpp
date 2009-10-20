@@ -1,6 +1,6 @@
-/* $Id: title.cpp,v 1.1.1.1 2005/05/27 09:44:26 woods Exp $ */
+/* $Id: title.cpp,v 1.3 2005/05/30 00:53:24 woods Exp $ */
 
-static char id[] = "$Id: title.cpp,v 1.1.1.1 2005/05/27 09:44:26 woods Exp $";
+static char id[] = "$Id: title.cpp,v 1.3 2005/05/30 00:53:24 woods Exp $";
 
 #include <stdio.h>
 #include <windows.h>
@@ -18,7 +18,8 @@ void InitHeader(const char *szIni)
     int len;
     int i, j;
 
-    len = ::GetPrivateProfileString("BkTbHdr", "HeaderList", "X-Mailer",
+    len = ::GetPrivateProfileString("BkTbHdr", "HeaderList",
+                          "X-Mailer,X-NewsReader,User-Agent",
                           headerbuf, sizeof(headerbuf) - 1, szIni);
     for (i = 0; i < len; i++) {
         for (j = i;
@@ -32,7 +33,7 @@ void InitHeader(const char *szIni)
 
 void ShowHeader(LPCTSTR lpMailID)
 {
-    int i;
+    int i = 0;
     char buf[1024];
     char str[1024];
 
@@ -50,7 +51,7 @@ void ShowHeader(LPCTSTR lpMailID)
     }
 
     if (buf[0] != 0) {
-        sprintf(str, " %s: %s", headerList[i], buf);
+        sprintf(str, "[%s: %s]", headerList[i], buf);
     } else {
         str[0] = 0;
     }
